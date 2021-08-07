@@ -13,6 +13,6 @@ The results are not satisfactory (about 50% accuracy)
 # Methods 2
 In order to have a larger training set, we also introduced new training data by augmenting available training images. Five square patches are extracted from the original train image.
 <div align="center">
-<img src="img/Immagine1.png" width="10px">
+<img src="img/Immagine1.png" width="100px">
 </div>
 <br />
