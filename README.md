@@ -1,5 +1,5 @@
 # Fingerprint Liveness Detection
-We first extract features from fingerprint images and then develop machine learning models such as neural networks and SVM for classification of real and fake fingerprints. The feature extraction methods that we used were WLD, LPQ or some neural networks.
+We first extract features from fingerprint images and then develop machine learning models such as neural networks and SVM for classification of real and fake fingerprints. In all approaches, information in the training set on the 'subject' owner of the fingerprint has been eliminated. The feature extraction methods that we used were WLD, LPQ or some neural networks.
 We were able to achieve, with the best approach, test accuracy ranging from 98% to 99%.
 
 # Data set
@@ -16,4 +16,12 @@ In order to have a larger training set, we also introduced new training data by 
 <img src="img/Immagine1.png" width="100px">
 </div>
 <br />
-the features extraction phase is operated through deep approach, using a VGG19 network pre-added on the dataset 'Imagenet'. The successive phases don't differ from the 'Method 1' which however do not allow to improve of much the obtained previous results.
+The features extraction phase is operated through deep approach, using a VGG19 network pre-added on the dataset 'Imagenet'. The successive phases don't differ from the 'Method 1', therefore an SVM is still used for the classification phase. However, this does not yet allow an improvement in accuracy.
+
+# Method 3
+This attempt concerns a completely deep approach. A neural network is used for both the features extraction phase and the classification phase. In particular, a resnet50 is used, and during the tuning the following optimal parameters are found:
+- Epoch: 8
+- Batch size: 16
+- Learning rate: 0.0005 (costant)
+- L2 Regularization: 0.0001
+This approach results in 95% accuracy
