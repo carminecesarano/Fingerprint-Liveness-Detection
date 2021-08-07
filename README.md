@@ -25,3 +25,10 @@ This attempt concerns a completely deep approach. A neural network is used for b
 - Learning rate: 0.0005 (costant)
 - L2 Regularization: 0.0001
 This approach results in 95% accuracy
+
+# Method 4
+To further improve performance, with the last attempt a learining rate scheduling is used with the following optimal parameters:
+- Initial learning rate: 0.0005
+- Drop factor: 0.7
+- Drop period : 3
+This last change allows to stabilize the learning with the epochs increasing and allows to gain some percentage point on the accuracy of the model, that reaches to 99,16%.
